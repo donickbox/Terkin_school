@@ -14,6 +14,7 @@ public class FacebookTask {
     @Test
     void FBAutorization(){
         open(furl);
+        
         $(byName("email")).setValue(femail);
         $(byName("pass")).setValue(fpassword).pressEnter();
         sleep(2000);
@@ -24,6 +25,7 @@ public class FacebookTask {
         $("html").shouldHave(text("Данное имя пользователя доступно"));
         $(byValue("Сохранить изменения")).click();
         sleep(5000);
+        
         $("html").shouldHave(text(fname));
     }
 }
