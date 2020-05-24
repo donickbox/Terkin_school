@@ -7,7 +7,7 @@ import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
 
 public class TestBase {
 
-    @BeforeAll
+   @BeforeAll
     public static void setUp() {
         Configuration.headless = true;
     }

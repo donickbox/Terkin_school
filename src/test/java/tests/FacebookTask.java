@@ -1,6 +1,5 @@
 package tests;
 
-
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -8,11 +7,13 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 import static helpers.Environment.*;
+
 @Tag("facebook")
 
-public class FacebookTask {
+public class FacebookTask extends TestBase {
     @Test
     void FBAutorization(){
+
         open(furl);
         
         $(byName("email")).setValue(femail);
@@ -27,6 +28,7 @@ public class FacebookTask {
         sleep(5000);
         
         $("html").shouldHave(text(fname));
+
     }
 }
 
