@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.*;
 import static helpers.Environment.*;
 
-@Tag("yandex")
+@Tag("tinkoff")
 
 public class TinkoffTask {
     @Test
